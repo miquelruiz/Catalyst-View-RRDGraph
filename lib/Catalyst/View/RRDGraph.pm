@@ -5,8 +5,6 @@ use warnings;
 
 use base 'Catalyst::View';
 
-our $VERSION = '0.05';
-
 use RRDs;
 use File::Temp qw();
 use MRO::Compat;
