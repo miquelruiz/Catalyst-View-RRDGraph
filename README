@@ -29,6 +29,10 @@ DESCRIPTION
     RRDs module, except for *filename*, that will be automatically generated
     by the view.
 
+    It doesn't depend on RRDs, but *does* need it to work (and for the tests
+    to pass). You can install RRDs, for instance, using Alien::RRDtool, or
+    compiling it manually from <http://oss.oetiker.ch/rrdtool/>
+
 CONFIGURATION
     Configurations for the view are:
 
@@ -45,7 +49,7 @@ CONFIGURATION
     $self, $c and $error. You can then generate your own content in this
     handler. Default (leaving undefined) is to throw an expception.
 
-    See http://oss.oetiker.ch/rrdtool/doc/rrdgraph.en.html for more info.
+    See <http://oss.oetiker.ch/rrdtool/doc/rrdgraph.en.html> for more info.
 
 METHODS
   new
@@ -59,7 +63,7 @@ AUTHOR
         CPAN ID: JLMARTIN
         CAPSiDE
         jlmartinez@capside.com
-        http://www.pplusdomain.net
+        L<http://www.pplusdomain.net>
 
 THANKS
     To Ton Voon for sending in patches, tests, and ideas.
@@ -74,9 +78,9 @@ COPYRIGHT
     with this module.
 
 SEE ALSO
-    RRDs: http://oss.oetiker.ch/rrdtool/prog/RRDs.en.html
+    RRDs: <http://oss.oetiker.ch/rrdtool/prog/RRDs.en.html>
 
-    RRD graph docs: http://oss.oetiker.ch/rrdtool/doc/rrdgraph.en.html,
-    http://oss.oetiker.ch/rrdtool/doc/rrdgraph_data.en.html,
-    http://oss.oetiker.ch/rrdtool/doc/rrdgraph_graph.en.html
+    RRD graph docs: <http://oss.oetiker.ch/rrdtool/doc/rrdgraph.en.html>,
+    <http://oss.oetiker.ch/rrdtool/doc/rrdgraph_data.en.html>,
+    <http://oss.oetiker.ch/rrdtool/doc/rrdgraph_graph.en.html>
 
