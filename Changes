@@ -1,6 +1,8 @@
 Revision history for Perl module Catalyst::View::RRDGraph
 
 {{$NEXT}}
+
+0.07      2012-11-19 00:48:53 Europe/Madrid
     - Skip tests if RRDs not found
     - Minor cosmetic changes
 
