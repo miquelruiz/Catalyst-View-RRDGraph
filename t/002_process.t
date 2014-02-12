@@ -16,10 +16,6 @@ SKIP: {
     use_ok( 'Catalyst::View::RRDGraph' );
     use_ok( 'Catalyst::Helper::View::RRDGraph');
 
-
-    my $object = Catalyst::View::RRDGraph->new ();
-    isa_ok ($object, 'Catalyst::View::RRDGraph');
-
     my $log = Test::MockObject->new();
     my $c = Test::MockObject->new();
     my $stash = {};
@@ -29,6 +25,9 @@ SKIP: {
     $c->mock( "serve_static_file", sub { shift; $served_filename = shift } );
     $c->mock( "log", sub { $log } );
     $c->mock( "error", sub { shift; $log_error = shift } );
+
+    my $object = Catalyst::View::RRDGraph->new($c);
+    isa_ok ($object, 'Catalyst::View::RRDGraph');
 
     eval { $object->process( $c ) };
     like( $@, "/No graph in the stash/", "No graph in stash" );
