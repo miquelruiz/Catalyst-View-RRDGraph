@@ -44,9 +44,9 @@ SKIP: {
 
     RRDs->simulate_graph_generation(1);
     $object->process($c);
-    my $path_regex = File::Spec->catfile(
-        File::Spec->rootdir, 'tmp', 'cat_view_rrd_.*\.png'
-    );
+    my $path_regex = quotemeta(File::Spec->catfile(
+        File::Spec->rootdir, 'tmp', 'cat_view_rrd_'
+    )) . '.*\.png';
     like( $served_filename, qr($path_regex), "Got served file" );
     my $graph_input = RRDs->graph_input;
     shift @$graph_input; 		# This is the temporary filename, so ignore for now
